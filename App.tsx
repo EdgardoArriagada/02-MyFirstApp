@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {Text , View} from 'react-native';
+import {Text, View} from 'react-native';
 
 export const App: FC = () => {
   return (
