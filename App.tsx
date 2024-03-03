@@ -1,10 +1,11 @@
-import React, {FC} from 'react';
-import {Text, View} from 'react-native';
+import {FC} from 'react';
+import {SafeAreaView} from 'react-native';
+import {HelloWorldScreen} from './src/presentation/screens/HelloWorldScreen';
 
 export const App: FC = () => {
   return (
-    <View>
-      <Text>hola mundo</Text>
-    </View>
+    <SafeAreaView style={{flex: 1}}>
+      <HelloWorldScreen />
+    </SafeAreaView>
   );
 };
