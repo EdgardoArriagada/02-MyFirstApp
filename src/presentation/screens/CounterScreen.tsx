@@ -1,6 +1,6 @@
 import {FC, useState} from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
-import {PrimaryButton} from '../components/shared/PrimaryButton';
+import {StyleSheet, Text, View} from 'react-native';
+import {Button} from 'react-native-paper';
 
 export const CounterScreen: FC = () => {
   const [counter, setCounter] = useState(0);
@@ -8,11 +8,12 @@ export const CounterScreen: FC = () => {
   return (
     <View style={s.container}>
       <Text style={s.title}>{counter}</Text>
-      <PrimaryButton
+      <Button
         onPress={() => setCounter(c => c + 1)}
-        onLongPress={() => setCounter(0)}>
+        onLongPress={() => setCounter(0)}
+        mode="contained">
         Hola amigo
-      </PrimaryButton>
+      </Button>
     </View>
   );
 };
