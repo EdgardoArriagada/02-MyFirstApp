@@ -1,4 +1,6 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
+
+const isIos = Platform.OS === 'ios';
 
 export const gs = StyleSheet.create({
   centerContainer: {
@@ -15,6 +17,6 @@ export const gs = StyleSheet.create({
     position: 'absolute',
     margin: 16,
     right: 0,
-    bottom: 0,
+    bottom: isIos ? 0 : 25,
   },
 });
